@@ -8,14 +8,14 @@ It is a package for python and the commands for terminal will be available in fu
 Use pip (recommended, but not yet)
 
 ```shell
-pip3 install windi
+$ pip3 install windi
 ```
 
 
 Alternatively download [a release](https://gitlab.com/parsaalian0/windi/-/archive/master/windi-master.zip), extract it and run
 
 ```shell
-python3 setup.py install
+$ python3 setup.py install
 ```
 
 
@@ -26,23 +26,23 @@ For the above installation to work, you need to have installed from your distrib
 For installing libindi
 
 ```shell
-sudo apt-add-repository ppa:mutlaqja/ppa
-sudo apt-get update
-sudo apt-get install indi-full
-sudo apt-get install swig libz3-dev libcfitsio-dev libnova-dev
+$ sudo apt-add-repository ppa:mutlaqja/ppa
+$ sudo apt-get update
+$ sudo apt-get install indi-full
+$ sudo apt-get install swig libz3-dev libcfitsio-dev libnova-dev
 ```
 
 For installing python pyindi-client:
 
 ```shell
-pip3 install --user --install-option="--prefix=" pyindi-client
-sudo -H pip3 install --system pyindi-client
+$ pip3 install --user --install-option="--prefix=" pyindi-client
+$ sudo -H pip3 install --system pyindi-client
 ```
 
 If any errors occurred during the installation, download [pyindi-client release](https://github.com/jochym/pyindi-client/tree/master/pip/pyindi-client), extract it and run
 
 ```shell
-python3 setup.py install
+$ python3 setup.py install
 ```
 
 ## Built With
@@ -69,13 +69,13 @@ To use pywindi and connect indi devices you should launch an *indiserver* on you
   CCD you should run this command in terminal.
 
 ```shell
-indiserver indi_sbig_ccd
+$ indiserver indi_sbig_ccd
 ```
 
 If you want connect multiple device you can try this for SBIG CCD and V4L2 CCD.
 
 ```shell
-indiserver indi_sbig_ccd indi_v4l2_ccd
+$ indiserver indi_sbig_ccd indi_v4l2_ccd
 ```
     
 #### 2. Connect to a Winclient
@@ -255,13 +255,18 @@ For taking image with SBIG CCD you have 2 option.
 
 Run following command in your terminal. You must set all of parameters.
 
-```python
-capture --time #EXPOSURE_TIME --temperature #CCD_TEMPERATURE --binning (#BINNING_X, #BINNING_Y) --interval #IMAGES_INTERVAL_TIME --count #NUMBER_OF_IMAGES_TO_TAKE --type #IMAGE_TYPE
+```shell
+$ capture --time #EXPOSURE_TIME \
+          --temperature #CCD_TEMPERATURE \
+          --binning (#BINNING_X, #BINNING_Y) \
+          --interval #IMAGES_INTERVAL_TIME \
+          --count #NUMBER_OF_IMAGES_TO_TAKE \
+          --type #IMAGE_TYPE
 ```
 for example:
 
-```python
-capture --time 10 --temprature -10 --binning (1.0, 1.0) --interval 5 --count 30 --type light
+```shell
+$ capture --time 10 --temprature -10 --binning (1.0, 1.0) --interval 5 --count 30 --type light
 ```
 
 Captured images will save in directory you cofigured in section 6.
