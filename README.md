@@ -231,8 +231,8 @@ To taking image from a SBIG CCD you must first configure device. For this you ha
 
 You can run following command in terminal and configure *directory* and *hosts*.
 
-```python
-ccd_config --directory  "YOUR_DIRECTORY" --hosts ("localhost", 7624)
+```shell
+$ ccd_config --directory  "YOUR_DIRECTORY" --hosts ("localhost", 7624)
 ```
     
 This command make **ccd_base_config.txt** in pywindi directory and we use that to configure our capturing.
