@@ -52,7 +52,10 @@ $ python3 setup.py install
 
 ## Authors
 
-* **Parsa Alian** - *Initial work* - [parsaalian0](https://gitlab.com/parsaalian0)
+*Original Author:*
+* **Parsa Alian** - [parsaalian0](https://gitlab.com/parsaalian0)
+
+*Contributing Authors:*
 * **Emad Salehi** - [emad_salehi](https://gitlab.com/emad_salehi)
 * **Seyed Sajad Kahani** - [sskahani](https://gitlab.com/sskahani)
 
