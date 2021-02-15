@@ -253,20 +253,27 @@ For taking image with SBIG CCD you have 2 option.
 
 ##### 7.1. Command line capturing
 
-Run following command in your terminal. You must set all of parameters.
+Run following command in your terminal. You must set all <parameters> below:
 
 ```shell
-$ capture --time #EXPOSURE_TIME \
-          --temperature #CCD_TEMPERATURE \
-          --binning (#BINNING_X, #BINNING_Y) \
-          --interval #IMAGES_INTERVAL_TIME \
-          --count #NUMBER_OF_IMAGES_TO_TAKE \
-          --type #IMAGE_TYPE
+$ capture --type <IMAGE_TYPE> \
+          --time <EXPOSURE_TIME> \
+          --temperature <CCD_TEMPERATURE> \
+          --interval <IMAGES_INTERVAL_TIME> \
+          --count <NUMBER_OF_IMAGES_TO_TAKE> \
+          --binning (<BINNING_X>, <BINNING_Y>) \
+          
 ```
+
 for example:
 
 ```shell
-$ capture --time 10 --temprature -10 --binning (1.0, 1.0) --interval 5 --count 30 --type light
+$ capture --type light \
+          --time 10 \
+          --temprature -10 \
+          --interval 5 \
+          --count 30 \
+          --binning (1.0, 1.0)
 ```
 
 Captured images will save in directory you cofigured in section 6.
@@ -290,10 +297,10 @@ sbig_device.configure(image_directory=image_path + str(addresses[0]) + '/')
 And finaly you can set your arbitrary properties and take image like bellow.
 
 ```python
-sbig_device.set_temperature(#CCD_TEMPERATURE)
-sbig_device.set_frame_type(#TYPE_OF_IMAGE)
-sbig_device.set_binning(#BINNING_X, #BINNING_Y)
-sbig_device.take_image(#EXPOSURE_TIME)
+sbig_device.take_image(<EXPOSURE_TIME>)
+sbig_device.set_frame_type(<TYPE_OF_IMAGE>)
+sbig_device.set_temperature(<CCD_TEMPERATURE>)
+sbig_device.set_binning(<BINNING_X>, <BINNING_Y>)
 ```
 
 Captured images will save in directory you configured in section 6.
