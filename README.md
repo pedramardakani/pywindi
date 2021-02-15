@@ -284,7 +284,7 @@ sbig_device.configure(image_directory=image_path + str(addresses[0]) + '/')
 
 And finaly you can set your arbitrary properties and take image like bellow.
 
-```pyhon
+```python
 sbig_device.set_temperature(#CCD_TEMPERATURE)
 sbig_device.set_frame_type(#TYPE_OF_IMAGE)
 sbig_device.set_binning(#BINNING_X, #BINNING_Y)
